@@ -10,6 +10,9 @@ public class Boss {
     }
 
     public void setHealthBoss(int healthBoss) {
+        if (healthBoss < 700){
+            System.out.println("Слишклм мало жизней, босс проиграет =( ");
+        }
         this.healthBoss = healthBoss;
     }
 
@@ -18,6 +21,9 @@ public class Boss {
     }
 
     public void setDamageBoss(int damageBoss) {
+        if (damageBoss >= 200){
+            System.out.println("Босс слишком сильный, игра закончится быстро =) ");
+        }
         this.damageBoss = damageBoss;
     }
 
@@ -26,12 +32,6 @@ public class Boss {
     }
 
     public void setProtectBoss(String protectBoss) {
-        this.protectBoss = protectBoss;
-    }
-
-    public Boss(int healthBoss, int damageBoss, String protectBoss){
-        this.healthBoss = healthBoss;
-        this.damageBoss = damageBoss;
         this.protectBoss = protectBoss;
     }
 }
